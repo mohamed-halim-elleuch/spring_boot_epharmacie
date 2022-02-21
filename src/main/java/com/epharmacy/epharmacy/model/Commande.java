@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -33,23 +34,26 @@ public class Commande implements Serializable  {
     @Column(name = "updated_at")
     private LocalDateTime updated_at;
 
-    @Column(name="nom_client")
-    private String nom_client;
+    @OneToMany(mappedBy = "commande")
+    private Collection<CommandeObjet> commandeObjets;
+
+    private double totalAmount;
 
     @Column(name="statut")
     private String statut;
 
-    @Column(name="numero_envoi")
-    private int numero_envoi;
+
+    @OneToOne
+    private Facture facture;
+
+    @OneToOne
+    private Livraison livraison;
+
+    @ManyToOne
+    private AppUser appUser;
 
     public int getId() {
         return commandeid;
     }
-
-    @OneToMany(mappedBy="commande")
-    private Set<Livraison> livraisons;
-
-    @OneToMany(mappedBy="commande")
-    private Set<Facture> factures;
 
 }

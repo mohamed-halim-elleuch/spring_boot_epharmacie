@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -32,14 +33,11 @@ public class Livraison {
     }
 
 
-    //@OneToMany(targetEntity = Commande.class,cascade = CascadeType.ALL)
-    //@JoinColumn(name ="commandeid",referencedColumnName = "commandeid")
-    //private List<Integer> commandes_id;
-
-
-
-    @ManyToOne
-    @JoinColumn(name="commandeid")
+    @OneToOne(mappedBy = "livraison")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Commande commande;
+
+
+
 
 }

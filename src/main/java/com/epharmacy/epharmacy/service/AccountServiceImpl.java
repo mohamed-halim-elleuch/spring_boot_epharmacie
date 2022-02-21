@@ -5,7 +5,6 @@ import com.epharmacy.epharmacy.Repository.AppUserRepository;
 import com.epharmacy.epharmacy.model.AppRole;
 import com.epharmacy.epharmacy.model.AppUser;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +16,7 @@ public class AccountServiceImpl implements AccountService {
     private AppRoleRepository appRoleRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+
     public AccountServiceImpl(AppUserRepository appUserRepository, AppRoleRepository appRoleRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.appUserRepository = appUserRepository;
         this.appRoleRepository = appRoleRepository;
@@ -24,7 +24,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public AppUser saveUser(String username, String password, String confirmedPassword) {
+    public AppUser saveUser(String username, String password, String confirmedPassword,String role) {
         AppUser user=appUserRepository.findByUsername(username);
         if(user!=null) throw new RuntimeException("User already exists");
         if(!password.equals(confirmedPassword)) throw new RuntimeException("Please confirm your password");
@@ -33,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
         appUser.setActived(true);
         appUser.setPassword(bCryptPasswordEncoder.encode(password));
         appUserRepository.save(appUser);
-        addRoleToUser(username,"USER");
+        addRoleToUser(username,role);
         return appUser;
     }
 

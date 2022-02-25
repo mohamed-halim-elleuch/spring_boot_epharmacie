@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
+
 @NoArgsConstructor
 @ToString
 @Entity
@@ -23,6 +23,10 @@ public class Category {
     @OneToMany(mappedBy = "category")
     @ToString.Exclude
     private List<Article> Articles;
+
+    public Category(Long Categoryid, String CategoryNom, List<Article> Articles) {
+
+    }
 
     public void UpdateCategory(String categoryNom){
         CategoryNom = categoryNom;

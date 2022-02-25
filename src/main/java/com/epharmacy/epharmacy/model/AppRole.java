@@ -12,7 +12,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-@AllArgsConstructor
+
 @NoArgsConstructor
 @ToString
 public class AppRole {
@@ -20,5 +20,9 @@ public class AppRole {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String roleName;
+
+    public AppRole(Long id, String roleName) {
+
+    }
 
 }

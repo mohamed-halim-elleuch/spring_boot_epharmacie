@@ -16,10 +16,14 @@ import java.util.List;
 @Table(name="Source")
 public class Source {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String SourceType;
     @OneToMany(mappedBy = "source")
     private List<Article> Articles;
+
+    public Source( String source) {
+        this.SourceType = source;
+
+    }
 
     public void UpdateSource(){}
     public void SourceDetail(){}

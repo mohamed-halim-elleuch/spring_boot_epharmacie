@@ -24,9 +24,11 @@ public class Category {
     @ToString.Exclude
     private List<Article> Articles;
 
-    public Category(Long Categoryid, String CategoryNom, List<Article> Articles) {
-
+    public Category(Object o, String antiviraux) {
+        this.Categoryid = (Long) o;
+        this.CategoryNom = antiviraux;
     }
+
 
     public void UpdateCategory(String categoryNom){
         CategoryNom = categoryNom;

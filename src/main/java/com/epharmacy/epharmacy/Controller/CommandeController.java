@@ -27,7 +27,7 @@ public class CommandeController {
     private AppUserRepository appUserRepository;
     @Autowired
     private CommandeObjetRepository commandeObjetRepository;
-    @PostMapping("/commandes")
+    @PostMapping("/addcommandes")
     public Commande saveCommande(@RequestBody CommandeForm commandeForm){
         AppUser appUser=new AppUser();
         appUser.setUsername(commandeForm.getAppUser().getUsername());

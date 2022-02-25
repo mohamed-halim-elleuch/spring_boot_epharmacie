@@ -1,12 +1,19 @@
 package com.epharmacy.epharmacy.Controller;
 
 
+import com.epharmacy.epharmacy.Repository.CommandeRepository;
 import com.epharmacy.epharmacy.Repository.FactureRepository;
 
+import com.epharmacy.epharmacy.model.AppUser;
+import com.epharmacy.epharmacy.model.Commande;
 import com.epharmacy.epharmacy.model.Facture;
+import com.epharmacy.epharmacy.model.Medecin;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @RequestMapping("/api")
@@ -14,12 +21,22 @@ import java.util.List;
 public class FactureController {
 
     @Autowired
+    private CommandeRepository commandeRepository;
+
+    @Autowired
     private FactureRepository factureRepo;
 
     @PostMapping("/AddFacture")
-    public String saveFacture(@RequestBody Facture facture){
-        factureRepo.save(facture);
-        return "Added Facture with id : " + facture.getFactureID();
+    public Facture saveFacture(@RequestBody FactureForm factureForm){
+        Commande commande = new Commande();
+        commande.setCommandeid(factureForm.getCommande().getCommandeid());
+        commande=commandeRepository.save(commande);
+        System.out.println(commande.getId());
+
+
+        Facture facture = new Facture();
+        facture=factureRepo.save(factureForm.getFacture());
+        return facture;
     }
 
     @GetMapping("/findAllFactures")
@@ -37,4 +54,10 @@ public class FactureController {
         factureRepo.deleteById(id);
         return "facture deleted with id : " + id;
     }
+}
+
+@Data
+class FactureForm{
+    private Commande commande = new Commande();
+    private Facture facture = new Facture();
 }

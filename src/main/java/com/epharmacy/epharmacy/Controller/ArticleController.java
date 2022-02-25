@@ -1,57 +1,49 @@
 package com.epharmacy.epharmacy.Controller;
 
-public class ArticleController {
-}
-
-/*package com.epharmacy.epharmacy.Controller;
 
 import com.epharmacy.epharmacy.Repository.ArticleRepository;
 import com.epharmacy.epharmacy.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-@RequestMapping("/api/Article")
+import static org.apache.logging.log4j.message.MapMessage.MapFormat.JSON;
+
 @RestController
 public class ArticleController {
-    private final ArticleRepository articleRepo;
+    @Autowired
+    private ArticleRepository articleRepository;
 
-    public ArticleController(ArticleRepository articleRepo) {
-        this.articleRepo = articleRepo;
+    @GetMapping( "/listarticle")
+    private String listProduct()
+    {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
+        List<Article> list = articleRepository.findAll();
+        modelMap.put("articleList", list);
+        String json=modelMap.toString();
+        return json;
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<List<Article>> getAllArticles(){
-        List<Article> Article = articleRepo.findAllArticles();
-        return new ResponseEntity<>(Article, HttpStatus.OK);
-    }
+    @GetMapping(value = "/sortarticlebyprice")
+    private Map<String, Object> sortArticleByPrice() {
+        Map<String, Object> modelMap = new HashMap<>();
+        List<Article> list = articleRepository.findAll(Sort.by("ArticlePrice").ascending());
+        modelMap.put("articleListByPrice", list);
 
-    @GetMapping("/find/{id}")
-    public ResponseEntity<Article> getEmployeeById(@PathVariable("id") Long id){
-        Article Article = articleRepo.findArticleById(id);
-        return new ResponseEntity<>(Article, HttpStatus.OK);
+        return modelMap;
     }
-
-    @PostMapping("/add")
-    public ResponseEntity<Article> addArticle(@RequestBody Article article){
-        Article newArticle = articleRepo.addArticle(article);
-        return new ResponseEntity<>(newArticle,HttpStatus.CREATED);
+    @GetMapping(value = "/sortarticlebypricedesc")
+    private Map<String, Object> sortArticleByPriceDesc() {
+        Map<String, Object> modelMap = new HashMap<>();
+        List<Article> list = articleRepository.findAll(Sort.by("ArticlePrice").descending());
+        modelMap.put("articleListByPriceDesc", list);
+        return modelMap;
     }
-
-    @PutMapping("/update")
-    public ResponseEntity<Article> updateEmployee(@RequestBody Article Article){
-        Article updateArticle = articleRepo.updateArticle(Article);
-        return new ResponseEntity<>(updateArticle,HttpStatus.OK);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteArticle(@PathVariable("id") Long id){
-        articleRepo.deleteArticle(id);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
 }
-*/
+
+

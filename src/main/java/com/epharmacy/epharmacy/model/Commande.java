@@ -26,9 +26,7 @@ public class Commande implements Serializable  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int commandeid;
 
-    @CreationTimestamp
-    @Column(name = "created_at", updatable = false)
-    private LocalDateTime created_at;
+
 
     @UpdateTimestamp
     @Column(name = "updated_at")

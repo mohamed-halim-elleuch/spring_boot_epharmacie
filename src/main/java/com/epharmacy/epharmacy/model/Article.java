@@ -34,6 +34,10 @@ public class Article {
     @ManyToOne
     @JoinColumn(name = "Category")
     private Category category;
+    @ManyToOne
+    private Pharmacie pharmacie;
+    @ManyToOne
+    private Fournisseur fournisseur;
 
 
     //

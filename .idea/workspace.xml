@@ -5,50 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dcb61bd-315a-4fae-89ad-ee660224f471" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epharmacy/epharmacy/model/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epharmacy/epharmacy/model/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7df1e0c5-aaaf-4b9d-bc79-8ce870894c79.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7df1e0c5-aaaf-4b9d-bc79-8ce870894c79.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epharmacy/epharmacy/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epharmacy/epharmacy/model/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epharmacy/epharmacy/security/JWTAuthorizationFiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epharmacy/epharmacy/security/JWTAuthorizationFiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/CommandeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/CommandeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/FactureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/FactureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/LivraisonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/LivraisonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/TaskController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/TaskForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/TaskForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/UserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Controller/UserForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/EPharmacyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/EPharmacyApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/AppRoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/AppRoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/AppUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/AppUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/CommandeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/CommandeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/FactureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/FactureRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/LivraisonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/LivraisonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/Repository/TaskRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/AppRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/AppRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/AppUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/AppUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Commande.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Facture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Facture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Livraison.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Livraison.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/JWTAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/JWTAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/model/Article.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/JWTAuthorizationFiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/JWTAuthorizationFiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/SecurityParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/SecurityParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/security/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/CommandeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/CommandeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/FactureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/FactureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/LivraisonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/LivraisonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epharmacy/epharmacy/service/TaskService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/epharmacy/epharmacy/EPharmacyApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/epharmacy/epharmacy/EPharmacyApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,6 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager" selected="Spring Boot.Unnamed">
     <configuration name="Unnamed" type="JavaScriptTraceType" factoryName="Swift Package Run" nameIsGenerated="true" node="project" config="" has-config="false" system-proxy="true" proxy-port="3546" open-browser="false" browser="" limits="1,3,3,50">
@@ -97,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645791210673</updated>
-      <workItem from="1645791215138" duration="1631000" />
+      <workItem from="1645791215138" duration="3419000" />
     </task>
     <servers />
   </component>

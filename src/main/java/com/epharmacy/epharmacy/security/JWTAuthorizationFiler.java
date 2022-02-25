@@ -37,7 +37,7 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
             return;
         }
-        /*else {
+        else {
             String jwtToken = request.getHeader(SecurityParams.JWT_HEADER_NAME);
             System.out.println("Token="+jwtToken);
             if (jwtToken == null || !jwtToken.startsWith(SecurityParams.HEADER_PREFIX)) {
@@ -57,7 +57,7 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
                     new UsernamePasswordAuthenticationToken(username, null, authorities);
             SecurityContextHolder.getContext().setAuthentication(user);
             filterChain.doFilter(request, response);
-        }*/
+        }
 
     }
 

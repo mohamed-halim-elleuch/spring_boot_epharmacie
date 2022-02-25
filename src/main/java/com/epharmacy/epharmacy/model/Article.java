@@ -40,6 +40,10 @@ public class Article implements Serializable {
     @ManyToOne
     @JoinColumn(name = "Category")
     private Category category;
+    @ManyToOne
+    private Pharmacie pharmacie;
+    @ManyToOne
+    private Fournisseur fournisseur;
 
 
     //

@@ -30,6 +30,7 @@ public class CommandeController {
     @PostMapping("/addcommandes")
     public Commande saveCommande(@RequestBody CommandeForm commandeForm){
         AppUser appUser=new AppUser();
+        System.out.println(commandeForm);
         appUser.setUsername(commandeForm.getAppUser().getUsername());
         appUser=appUserRepository.save(appUser);
         System.out.println(appUser.getId());
@@ -41,7 +42,7 @@ public class CommandeController {
         for(CommandeAricle p:commandeForm.getAricles()){
             CommandeObjet commandeObjet=new CommandeObjet();
             commandeObjet.setCommande(commande);
-            Article article=articleRepository.findById(p.getId()).get();
+            Article article=articleRepository.findById(Math.toIntExact(p.getId())).get();
             commandeObjet.setArticle(article);
             commandeObjet.setPrice(article.getArticlePrice());
             commandeObjet.setQuantity(p.getQuantity());

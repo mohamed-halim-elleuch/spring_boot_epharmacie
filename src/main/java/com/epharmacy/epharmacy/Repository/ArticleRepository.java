@@ -11,15 +11,17 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RepositoryRestResource
-public interface ArticleRepository extends JpaRepository<Article, Long> {
-    @RestResource(path = "/selectedProducts")
+public interface ArticleRepository extends JpaRepository<Article, Integer> {
+    /*@RestResource(path = "/selectedProducts")
     List<Article> findBySelectedIsTrue();
     //@RestResource(path = "/productsByKeyword")
     //List<Article> findByArticleNomContains(String mc);
     @RestResource(path = "/promoProducts")
     List<Article> findByPromotionIsTrue();
     @RestResource(path = "/dispoProducts")
-    List<Article> findByAvailableIsTrue();
+    List<Article> findByAvailableIsTrue();*/
+
+
 }
 
 /*package com.epharmacy.epharmacy.Repository;

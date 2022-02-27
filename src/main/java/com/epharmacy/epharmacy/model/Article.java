@@ -19,16 +19,17 @@ public class Article implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false,updatable = false)
-    private Long ArticleID;
+    private int ArticleID;
     private String ArticleNom;
     private int ArticlePrice;
     private boolean promotion;
     private boolean selected;
     private boolean available;
     private int StockQuantity;
-    private int RateTva;
+    private int Rate;
     private int RateDiscount;
     private String ArticleImage;
+    @Column(columnDefinition = "TEXT")
     private String ArticleDescription;
     @Transient
     private int quantity=1;

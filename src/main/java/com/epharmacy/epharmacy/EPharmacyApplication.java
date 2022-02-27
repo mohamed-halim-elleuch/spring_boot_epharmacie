@@ -86,7 +86,7 @@ public class EPharmacyApplication implements CommandLineRunner {
 				p.setFournisseur(fournisseurRepository.getById(i+1));
 				p.setPharmacie(pharmacieRepository.getById(i+1));
 				p.setSource(new Source("étranger"));
-				p.setArticleImage("unknown.png");
+				p.setArticleImage("01-3.png");
 				articleRepository.save(p);
 			}
 		});

@@ -21,12 +21,12 @@ public class CatalogueRestController {
         this.articleRepository = articleRepository;
     }
     @GetMapping(path="/photoProduct/{id}",produces = MediaType.IMAGE_PNG_VALUE)
-    public byte[] getPhoto(@PathVariable("id") Long id) throws Exception{
+    public byte[] getPhoto(@PathVariable("id") int id) throws Exception{
         Article p=articleRepository.findById(id).get();
         return Files.readAllBytes(Paths.get(System.getProperty("user.home")+"/ecom/products/"+p.getArticleImage()));
     }
     @PostMapping(path = "/uploadPhoto/{id}")
-    public void uploadPhoto(MultipartFile file, @PathVariable Long id) throws Exception{
+    public void uploadPhoto(MultipartFile file, @PathVariable int id) throws Exception{
         Article p=articleRepository.findById(id).get();
         p.setArticleImage(file.getOriginalFilename());
         Files.write(Paths.get(System.getProperty("user.home")+"/ecom/products/"+p.getArticleImage()),file.getBytes());

@@ -6,28 +6,19 @@ import com.epharmacy.epharmacy.model.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static org.apache.logging.log4j.message.MapMessage.MapFormat.JSON;
+import java.util.Optional;
 
 @RestController
 public class ArticleController {
     @Autowired
     private ArticleRepository articleRepository;
 
-    @GetMapping( "/listarticle")
-    private String listProduct()
-    {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        List<Article> list = articleRepository.findAll();
-        modelMap.put("articleList", list);
-        String json=modelMap.toString();
-        return json;
-    }
 
     @GetMapping(value = "/sortarticlebyprice")
     private Map<String, Object> sortArticleByPrice() {
@@ -44,6 +35,8 @@ public class ArticleController {
         modelMap.put("articleListByPriceDesc", list);
         return modelMap;
     }
+
+
 }
 
 
